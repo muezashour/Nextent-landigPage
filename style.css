@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 html, body {
     scroll-behavior: smooth;
@@ -10,6 +14,7 @@ html, body {
     background-color: rgb(245, 247, 250);
     scroll-behavior: smooth;
     width: 100%;
+    overflow-x: hidden;
 
 }  
 .header-section{
@@ -360,7 +365,7 @@ section {
 }
 .feature-info{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 40px;
     max-width: 100%;
     padding: 40px 20px;
@@ -675,8 +680,8 @@ footer{
 }
 .feature-info{
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, minmax(170px, 1fr));
+    gap: 20px;
 }
 .iconf img{
     width: 58px; 
@@ -1033,10 +1038,13 @@ font-size: 12px;
     
 }
 .test-content > p:first-child {
-        font-size: 12px;
-        width: 400px;
+        font-size: 7px;
+        width: 100%;
         line-height: 15px;
         align-self: center;
+        padding: 0 12px; /* Adds spacing for better readability */
+    box-sizing: border-box;
+        
 }
 
 .feature-content {
@@ -1055,7 +1063,8 @@ font-size: 12px;
 
 .feature-info {
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+    width: 100%;
 }
 .spans-card > span:first-child{
     font-size: 17px;
@@ -1067,6 +1076,7 @@ font-size: 14px;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 150px;
 }
 
 .iconf img {
@@ -1158,8 +1168,8 @@ footer {
 }
 
 .footer-info {
-    display: grid;
-    grid-template-columns: repeat(2 ,1fr) ;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 20px;
 }
@@ -1167,7 +1177,7 @@ footer {
 .info-elemnts {
     display: flex;
     align-items: flex-start;
-    width: 150px;
+    width: 120px;
 
 }
 
