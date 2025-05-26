@@ -6,15 +6,22 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+p{
+    word-wrap: break-word;  
+    white-space: normal;
+}
 
 
+/* html{
+
+} */
 html, body {
     scroll-behavior: smooth;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(245, 247, 250);
-    scroll-behavior: smooth;
     width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
 
 }  
 .header-section{
@@ -530,7 +537,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    
     background-color:rgb(38, 50, 56);
     height: auto; 
     padding-bottom: 50px;
@@ -847,7 +854,7 @@ font-size: 12px;
 
 }
 .info-elemnts{
-    width: 200px;
+    width: 190px;
     align-items: flex-start;
 }
 .email-wrapper{
@@ -889,8 +896,17 @@ font-size: 12px;
     height: 48px;
     gap: 35px;
 }
+.footer-info{
+    width: 100%;
+    display: flex;
+    gap: 1px;
+    
+    justify-content: initial;
+}
 .footer{
     width: 100%;
+    gap: 20px;
+
 }
     
 }
@@ -900,11 +916,12 @@ font-size: 12px;
     }
     
 }
-/* MOBILE FIRST: Phones up to 480px */
+
 @media screen and (max-width: 480px) {
-    section{
+section{
         height: auto;
-    }
+        width: 100%;
+}
 .header-sectionPhone {
     padding: 15px;
 }
@@ -1038,12 +1055,14 @@ font-size: 12px;
     
 }
 .test-content > p:first-child {
-        font-size: 7px;
+        font-size: clamp(10px, 4vw, 16px);
         width: 100%;
         line-height: 15px;
         align-self: center;
-        padding: 0 12px; /* Adds spacing for better readability */
-    box-sizing: border-box;
+        padding: 0 30px; 
+        box-sizing: border-box;
+        word-wrap: break-word;  
+        white-space: normal;
         
 }
 
@@ -1188,8 +1207,8 @@ footer {
 }
 
 #backToTop {
-    right: 15px;
-    bottom: 15px;
+    right: 20px;
+    bottom: 20px;
     padding: 8px 10px;
     font-size: 14px;
 }
@@ -1356,8 +1375,8 @@ footer {
 
 .info-elemnts {
     display: flex;
-    align-items: flex-start;
-    width: 170px;
+    align-items: center;
+    width: 240px;
 
 }
 
